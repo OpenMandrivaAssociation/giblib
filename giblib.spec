@@ -14,7 +14,6 @@ URL:            http://linuxbrit.co.uk/giblib
 Source:         http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:  imlib2-devel
 BuildRequires:  freetype-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 giblib is a utility library used by many of the applications from
