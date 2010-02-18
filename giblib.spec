@@ -3,6 +3,7 @@
 %define release %mkrel 7
 %define major   1
 %define libname %mklibname %{name} %{major}
+%define develname %mklibname -d %name
 
 Name:           %{name}
 Version:        %{version}
@@ -32,14 +33,15 @@ Provides:       lib%{name} = %{version}-%{release}
 %description -n %{libname}
 This package contains the library needed to run %{name}.
 
-%package -n %{libname}-devel
+%package -n %{develname}
 Summary:        Development header files for %{name}
 Group:          Development/C
 Requires:       %{libname} = %{version}
 Provides:       lib%{name}-devel = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
+Obsoletes:	%{_lib}giblib1-devel < %{version}-%{release}
 
-%description -n %{libname}-devel
+%description -n %{develname}
 Libraries, include files and other resources you can use to develop
 %{name} applications.
 
@@ -47,12 +49,12 @@ Libraries, include files and other resources you can use to develop
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 rm -rf %{buildroot}%{_prefix}/doc
 chmod 644 %{buildroot}%{_libdir}/lib%{name}.la
 %multiarch_binaries %{buildroot}%{_bindir}/%{name}-config
@@ -71,9 +73,10 @@ rm -rf %{buildroot}
 %files -n %libname
 %defattr(-,root,root)
 %doc README ChangeLog AUTHORS
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}
+%{_libdir}/*.so.%{major}.*
 
-%files -n %libname-devel
+%files -n %develname
 %defattr(-,root,root)
 %multiarch %{multiarch_bindir}/%{name}-config
 %{_bindir}/%{name}-config
