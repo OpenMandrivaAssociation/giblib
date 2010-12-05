@@ -1,6 +1,6 @@
 %define name    giblib
 %define version 1.2.4
-%define release %mkrel 7
+%define release %mkrel 8
 %define major   1
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname -d %name
