@@ -9,9 +9,9 @@ Release:	9
 License:	GPLv2
 Group:		System/Libraries
 Url:		http://linuxbrit.co.uk/giblib
-Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(imlib2)
+Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.gz
 BuildRequires:	freetype-devel
+BuildRequires:	pkgconfig(imlib2)
 
 %description
 giblib is a utility library used by many of the applications from
@@ -50,7 +50,7 @@ Libraries, include files and other resources you can use to develop
 rm -rf %{buildroot}%{_prefix}/doc
 
 %files -n %libname
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libgiblib.so.%{major}*
 
 %files -n %{devname}
 %doc README ChangeLog AUTHORS
