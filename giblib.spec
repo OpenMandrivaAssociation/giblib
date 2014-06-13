@@ -5,7 +5,7 @@
 Summary:	Simple library and a wrapper for imlib2
 Name:		giblib
 Version:	1.2.4
-Release:	13
+Release:	14
 License:	GPLv2
 Group:		System/Libraries
 Url:		http://linuxbrit.co.uk/giblib
