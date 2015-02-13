@@ -5,11 +5,11 @@
 Summary:	Simple library and a wrapper for imlib2
 Name:		giblib
 Version:	1.2.4
-Release:	16
+Release:	17
 License:	GPLv2
 Group:		System/Libraries
 Url:		http://linuxbrit.co.uk/giblib
-Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.gz
+Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:	freetype-devel
 BuildRequires:	pkgconfig(imlib2)
 
@@ -42,7 +42,7 @@ Libraries, include files and other resources you can use to develop
 %setup -q
 
 %build
-%configure2_5x --disable-static
+%configure
 %make
 
 %install
