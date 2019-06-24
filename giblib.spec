@@ -12,6 +12,7 @@ Url:		http://linuxbrit.co.uk/giblib
 Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:	freetype-devel
 BuildRequires:	pkgconfig(imlib2)
+BuildRequires:	pkgconfig(x11)
 
 %description
 giblib is a utility library used by many of the applications from
