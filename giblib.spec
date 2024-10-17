@@ -8,7 +8,7 @@ Version:	1.2.4
 Release:	21
 License:	GPLv2
 Group:		System/Libraries
-Url:		http://linuxbrit.co.uk/giblib
+Url:		https://linuxbrit.co.uk/giblib
 Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:	freetype-devel
 BuildRequires:	pkgconfig(imlib2)
