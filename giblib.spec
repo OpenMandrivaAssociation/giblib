@@ -10,6 +10,11 @@ License:	GPLv2
 Group:		System/Libraries
 Url:		https://linuxbrit.co.uk/giblib
 Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	freetype-devel
 BuildRequires:	pkgconfig(imlib2)
 BuildRequires:	pkgconfig(x11)
